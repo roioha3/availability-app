@@ -12,7 +12,6 @@ services:
           property: connectionString
       - key: PYTHONUNBUFFERED
         value: "1"
-    preDeployCommand: python -m alembic upgrade head
 
 databases:
   - name: availability-db
