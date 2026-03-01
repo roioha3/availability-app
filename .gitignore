@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# Conda
+.conda/
+conda-meta/
+
+# Alembic
+*.db
+
+# OS/IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log

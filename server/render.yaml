@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: availability-api
+    env: docker
+    rootDir: server
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: availability-db
+          property: connectionString
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    releaseCommand: python -m alembic upgrade head
+
+databases:
+  - name: availability-db
+    plan: free
